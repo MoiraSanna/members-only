@@ -3,7 +3,7 @@
   <head>
     <title>Members Only</title>
 
-        <title><%= yield(:title) %> | Members Only</title>
+        <title><%= full_title(yield(:title)) %></title>
 
     <%= csrf_meta_tags %>
 
