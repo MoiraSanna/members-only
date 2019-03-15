@@ -1,10 +1,29 @@
 <% provide(:title, "Home") %>
+<div style="background:wheat !important"class="center jumbotron">
   	<h1>Members Only Site</h1>
-  	<p>
-  		This is the home page for our Members Only website, a place where gossip is encouraged. Non members will be able to read the posts but only members will be authorised to write in here and will know who the other members are.
-  	</p>
 
-  	<p>
-  		This exercise is part of the fantastic
-  		<a href="https://www.theodinproject.com"> Odin Project </a>website. I hope to see you there soon!
-  	</p>
+  	<h2>
+  		This app has been made possible by the fantastic
+  		<a href="https://www.theodinproject.com"> Odin Project </a>teachings. I hope to see you there soon!
+  	</h2>
+
+
+  	<%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+</div>
+ 
+
+
+<div id="container">
+ <div id="floated">
+<%= link_to image_tag("members-only.png", alt: "Members Only") %>
+
+</div>
+<p>
+  		This is the home page for our Members Only website, a place where gossip is encouraged. Non members will be able to read the posts but only members will be authorised to write in here and will know who the other members are.
+  	 </p>
+
+  	 <p>
+  	 	Gossiping boys are welcome, too!
+  	 </p>
+</div>
+  
