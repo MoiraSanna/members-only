@@ -12,6 +12,8 @@ class SecretsController < ApplicationController
 
   def create
     @secret = Secret.new(secret_params)
+    @secret.user_id = current_user.id
+    @secret.author = current_user.name
   	if @secret.save
   		flash[:success] = "Your secret will be safe with us."
   		redirect_to root_url
@@ -29,6 +31,7 @@ end
     	flash[:danger] = "Members only, please log in"
     	redirect_to login_url
 end
+end
 
    private
 
@@ -36,5 +39,5 @@ end
   	params.require(:secret).permit(:title, :body)
 end
 end
-end
+
 
